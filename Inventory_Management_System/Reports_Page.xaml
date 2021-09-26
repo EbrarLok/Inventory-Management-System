@@ -1,0 +1,41 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Inventory_Management_System"
+      xmlns:chart="http://mindfusion.eu/charting/wpf" x:Class="Inventory_Management_System.Reports_Page"
+      mc:Ignorable="d" 
+      d:DesignHeight="553" d:DesignWidth="1012"
+      Title="Reports_Page"  Background="#FF2479AA">
+
+    <Grid>
+        <lvc:PieChart x:Name="PieChart" LegendLocation="Bottom" Series="{Binding ProductSeriesCollection}" Hoverable="True" InnerRadius="20" Margin="245,35,259,206">
+            <lvc:PieChart.ChartLegend>
+                <lvc:DefaultLegend/>
+            </lvc:PieChart.ChartLegend>
+        </lvc:PieChart>
+
+        <StackPanel HorizontalAlignment="Left" Height="88" Margin="233,397,0,0" VerticalAlignment="Top" Width="153" Background="#FF3BD690">
+            <Label Content="Products" Margin="8,8,12,0" FontFamily="Arial" FontSize="18"/>
+            <Label Margin="29,-15,0,0" FontSize="29">
+                <Label x:Name="LblTotalProducts" Content="Label"/>
+            </Label>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="88" Margin="423,397,0,0" VerticalAlignment="Top" Width="153" Background="#FF3BD690">
+            <Label Content="Clients" Margin="8,8,12,0" FontFamily="Arial" FontSize="18"/>
+            <Label Margin="29,-15,0,0" FontSize="29">
+                <Label x:Name="LblTotalClients" Content="Label"/>
+            </Label>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="88" Margin="613,397,0,0" VerticalAlignment="Top" Width="153" Background="#FF3BD690">
+            <Label Content="Orders" Margin="8,8,12,0" FontFamily="Arial" FontSize="18"/>
+            <Label Margin="29,-15,0,0" FontSize="29">
+                <Label x:Name="LblTotalOrders" Content="Label"/>
+            </Label>
+        </StackPanel>
+
+
+    </Grid>
+</Page>

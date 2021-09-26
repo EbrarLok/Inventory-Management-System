@@ -1,0 +1,47 @@
+﻿<Page x:Class="Inventory_Management_System.Products_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Inventory_Management_System"
+      mc:Ignorable="d" 
+      d:DesignHeight="553" d:DesignWidth="1012"
+      Title="Products_Page">
+
+    <Grid Name="prdctgrd" Background="#FF2479AA" Width="1012" Height="553">
+        <DataGrid x:Name="grdProduct" HorizontalAlignment="Left" Height="393" Margin="390,28,0,0" VerticalAlignment="Top" Width="536" SelectionChanged="grdProduct_SelectionChanged"/>
+        <GroupBox Header="Product Information" HorizontalAlignment="Left" Height="393" Margin="10,28,0,0" VerticalAlignment="Top" Width="347" FontSize="16" BorderBrush="#7F000000">
+            <Grid HorizontalAlignment="Left" Height="329" Margin="10,10,-2,-53" VerticalAlignment="Top" Width="327">
+                <Label Content="Product ID:" HorizontalAlignment="Left" Margin="-3,8,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+                <Label Content="Product Name:" HorizontalAlignment="Left" Margin="-3,58,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+                <Label Content="Product Quantity:" HorizontalAlignment="Left" Margin="-3,111,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+                <Label Content="Product Price" HorizontalAlignment="Left" Margin="-3,165,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+                <Label Content="Product Description:" HorizontalAlignment="Left" Margin="-3,219,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+                <Label Content="Product Category:" HorizontalAlignment="Left" Margin="-3,272,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+
+
+                <StackPanel HorizontalAlignment="Left" Height="323" Margin="171,1,0,0" VerticalAlignment="Top" Width="147">
+                    <xctk:MaskedTextBox Name="MskdProductId" Mask="0" Margin="0,13"/>
+                    <TextBox Name="TxtProductName" Margin="0,13" Height="23" TextWrapping="Wrap" Text=""/>
+                    <xctk:MaskedTextBox Name="MskdProductQuantity" Mask="00000" Margin="0,19"/>
+                    <xctk:MaskedTextBox Name="MskdProductPrice" Mask="00000" Margin="0,19"/>
+                    <TextBox Name="Txt_ProductDesc" Margin="0,13" Height="23" TextWrapping="Wrap" Text=""/>
+                    <ComboBox Name="CmbProductCategory" Margin="0,3">
+                        <ComboBoxItem Content="Electronic"/>
+                        <ComboBoxItem Content="Book"/>
+                        <ComboBoxItem Content="Other"/>
+                    </ComboBox>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+        <Button Name="Btn_ProductAdd" Content="Add" HorizontalAlignment="Left" Margin="36,439,0,0" VerticalAlignment="Top" Width="75" Click="Btn_ProductAdd_Click"/>
+        <Button Name="Btn_ProductEdit" Content="Edit" HorizontalAlignment="Left" Margin="140,439,0,0" VerticalAlignment="Top" Width="75" Click="Btn_ProductEdit_Click"/>
+        <Button Name="Btn_ProductDelete" Content="Delete" HorizontalAlignment="Left" Margin="244,439,0,0" VerticalAlignment="Top" Width="75" Click="Btn_ProductDelete_Click"/>
+
+
+
+
+
+    </Grid>
+</Page>
